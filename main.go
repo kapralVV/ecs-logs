@@ -19,7 +19,7 @@ import (
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/cli"
 	"github.com/apex/log/handlers/multi"
-	"github.com/segmentio/ecs-logs-go"
+	"github.com/kapralVV/ecs-logs-go"
 	"github.com/kapralVV/ecs-logs/lib"
 
 	_ "github.com/kapralVV/ecs-logs/lib/cloudwatchlogs"
