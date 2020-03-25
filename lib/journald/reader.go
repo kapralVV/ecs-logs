@@ -13,8 +13,8 @@ import (
 	"time"
 
 	"github.com/coreos/go-systemd/sdjournal"
-	"github.com/segmentio/ecs-logs-go"
-	"github.com/segmentio/ecs-logs/lib"
+	"github.com/kapralVV/ecs-logs-go"
+	"github.com/kapralVV/ecs-logs/lib"
 )
 
 func NewReader() (r lib.Reader, err error) {
@@ -31,7 +31,7 @@ func NewReader() (r lib.Reader, err error) {
 
 	var streamName string
 	if streamName = os.Getenv("JOURNALD_STREAM_NAME"); len(streamName) == 0 {
-		streamName = "CONTAINER_NAME"
+		streamName = "CONTAINER_ID_FULL"
 	}
 
 	r = &reader{Journal: j, streamName: streamName}
@@ -82,12 +82,12 @@ func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 	}
 
 	if msg.Stream, err = r.GetDataValue(r.streamName); err != nil {
-		// Fallback to CONTAINER_NAME
-		if msg.Stream, err = r.GetDataValue("CONTAINER_NAME"); err != nil {
+		// Fallback to CONTAINER_ID_FULL
+		if msg.Stream, err = r.GetDataValue("CONTAINER_ID_FULL"); err != nil {
 
-			// There's a CONTAINER_TAG but no CONTAINER_NAME, something is seriously
+			// There's a CONTAINER_TAG but no CONTAINER_ID_FULL, something is seriously
 			// wrong here, the log docker log driver is misbehaving.
-			err = fmt.Errorf("missing CONTAINER_NAME in message with CONTAINER_TAG=%s", msg.Group)
+			err = fmt.Errorf("missing CONTAINER_ID_FULL in message with CONTAINER_TAG=%s", msg.Group)
 
 			return
 		}

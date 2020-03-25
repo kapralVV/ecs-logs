@@ -15,8 +15,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/segmentio/ecs-logs/lib"
-	"github.com/segmentio/ecs-logs/lib/syslog/pool"
+	"github.com/kapralVV/ecs-logs/lib"
+	"github.com/kapralVV/ecs-logs/lib/syslog/pool"
 
 	"golang.org/x/net/proxy"
 )

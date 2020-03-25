@@ -3,8 +3,8 @@ package statsd
 import (
 	"testing"
 
-	"github.com/segmentio/ecs-logs-go"
-	"github.com/segmentio/ecs-logs/lib"
+	"github.com/kapralVV/ecs-logs-go"
+	"github.com/kapralVV/ecs-logs/lib"
 )
 
 func TestExtractMetrics(t *testing.T) {

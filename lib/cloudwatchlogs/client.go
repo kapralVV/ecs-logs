@@ -8,7 +8,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudwatchlogs"
-	"github.com/segmentio/ecs-logs/lib"
+	"github.com/kapralVV/ecs-logs/lib"
 )
 
 type client struct {

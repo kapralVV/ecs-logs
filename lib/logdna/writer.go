@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/apex/log"
-	"github.com/segmentio/ecs-logs/lib"
-	"github.com/segmentio/ecs-logs/lib/syslog"
+	"github.com/kapralVV/ecs-logs/lib"
+	"github.com/kapralVV/ecs-logs/lib/syslog"
 )
 
 func NewWriter(group string, stream string) (w lib.Writer, err error) {

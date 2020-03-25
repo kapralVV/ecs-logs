@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/segmentio/ecs-logs-go"
+	"github.com/kapralVV/ecs-logs-go"
 	"github.com/segmentio/jutil"
 )
 

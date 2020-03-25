@@ -20,14 +20,14 @@ import (
 	"github.com/apex/log/handlers/cli"
 	"github.com/apex/log/handlers/multi"
 	"github.com/segmentio/ecs-logs-go"
-	"github.com/segmentio/ecs-logs/lib"
+	"github.com/kapralVV/ecs-logs/lib"
 
-	_ "github.com/segmentio/ecs-logs/lib/cloudwatchlogs"
-	_ "github.com/segmentio/ecs-logs/lib/datadog"
-	_ "github.com/segmentio/ecs-logs/lib/logdna"
-	_ "github.com/segmentio/ecs-logs/lib/loggly"
-	_ "github.com/segmentio/ecs-logs/lib/statsd"
-	_ "github.com/segmentio/ecs-logs/lib/syslog"
+	_ "github.com/kapralVV/ecs-logs/lib/cloudwatchlogs"
+	_ "github.com/kapralVV/ecs-logs/lib/datadog"
+	_ "github.com/kapralVV/ecs-logs/lib/logdna"
+	_ "github.com/kapralVV/ecs-logs/lib/loggly"
+	_ "github.com/kapralVV/ecs-logs/lib/statsd"
+	_ "github.com/kapralVV/ecs-logs/lib/syslog"
 )
 
 type source struct {

@@ -1,5 +1,5 @@
 package main
 
 import (
-	_ "github.com/segmentio/ecs-logs/lib/journald"
+	_ "github.com/kapralVV/ecs-logs/lib/journald"
 )

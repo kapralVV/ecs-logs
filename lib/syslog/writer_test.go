@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	ecslogs "github.com/segmentio/ecs-logs-go"
-	"github.com/segmentio/ecs-logs/lib"
+	ecslogs "github.com/kapralVV/ecs-logs-go"
+	"github.com/kapralVV/ecs-logs/lib"
 )
 
 const testGoroutines = 50

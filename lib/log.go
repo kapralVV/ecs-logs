@@ -2,8 +2,8 @@ package lib
 
 import (
 	"github.com/apex/log"
-	"github.com/segmentio/ecs-logs-go"
-	"github.com/segmentio/ecs-logs-go/apex"
+	"github.com/kapralVV/ecs-logs-go"
+	"github.com/kapralVV/ecs-logs-go/apex"
 )
 
 type LogLevel log.Level
@@ -44,7 +44,7 @@ func (h *LogHandler) HandleLog(entry *log.Entry) (err error) {
 	}
 
 	if len(msg.Event.Info.Source) == 0 {
-		if pc, ok := ecslogs.GuessCaller(0, 10, "github.com/segmentio/ecs-logs/lib", "github.com/apex/log"); ok {
+		if pc, ok := ecslogs.GuessCaller(0, 10, "github.com/kapralVV/ecs-logs/lib", "github.com/apex/log"); ok {
 			if info, ok := ecslogs.GetFuncInfo(pc); ok {
 				msg.Event.Info.Source = info.String()
 			}

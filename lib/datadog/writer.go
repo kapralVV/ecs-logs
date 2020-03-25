@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/segmentio/ecs-logs-go"
-	"github.com/segmentio/ecs-logs/lib"
-	"github.com/segmentio/ecs-logs/lib/statsd"
+	"github.com/kapralVV/ecs-logs-go"
+	"github.com/kapralVV/ecs-logs/lib"
+	"github.com/kapralVV/ecs-logs/lib/statsd"
 	"github.com/statsd/datadog"
 )
 

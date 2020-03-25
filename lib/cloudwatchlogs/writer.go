@@ -7,7 +7,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/cloudwatchlogs"
-	"github.com/segmentio/ecs-logs/lib"
+	"github.com/kapralVV/ecs-logs/lib"
 )
 
 type writer struct {

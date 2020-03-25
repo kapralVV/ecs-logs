@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/segmentio/ecs-logs-go"
+	"github.com/kapralVV/ecs-logs-go"
 )
 
 func TestMessageString(t *testing.T) {
