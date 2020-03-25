@@ -171,16 +171,22 @@
 			"revisionTime": "2017-09-18T00:21:02Z"
 		},
 		{
-			"checksumSHA1": "sLM5tRtL85eSdaxblyygnEB9kUI=",
-			"path": "github.com/segmentio/ecs-logs-go",
-			"revision": "2f43d53e6e42c8b779b03e4fb7c1838a9c57c0b6",
-			"revisionTime": "2017-03-03T02:10:09Z"
+			"checksumSHA1": "L57o/+e3NjDk9pClduM+MGKhCvc=",
+			"path": "github.com/kapralVV/ecs-logs",
+			"revision": "6e7732d1b04ab963a3d9ef6de5209d0031e46a55",
+			"revisionTime": "2020-03-25T14:51:28Z"
 		},
 		{
-			"checksumSHA1": "bdRkX6PW5jL8fPYFPKRIkxctTRU=",
-			"path": "github.com/segmentio/ecs-logs-go/apex",
-			"revision": "49d047bbc69ccb12dfc6ad91e763d8f817550012",
-			"revisionTime": "2016-07-26T19:29:10Z"
+			"checksumSHA1": "3rO7N18RlY8xG1c4N8HbjDzEqHE=",
+			"path": "github.com/kapralVV/ecs-logs-go",
+			"revision": "578bed1a5dd698ef64d2252335c6864316503e71",
+			"revisionTime": "2020-03-25T15:08:24Z"
+		},
+		{
+			"checksumSHA1": "0OMTff9ZFKREYEJvG9TgcoQ0x78=",
+			"path": "github.com/kapralVV/ecs-logs-go/apex",
+			"revision": "578bed1a5dd698ef64d2252335c6864316503e71",
+			"revisionTime": "2020-03-25T15:08:24Z"
 		},
 		{
 			"checksumSHA1": "yMaAIGignj9Zrcp+MDEglFZfEcs=",
@@ -213,5 +219,5 @@
 			"revisionTime": "2017-03-29T01:43:45Z"
 		}
 	],
-	"rootPath": "github.com/segmentio/ecs-logs"
+	"rootPath": "github.com/kapralVV/ecs-logs"
 }

@@ -73,6 +73,12 @@ func (r *reader) ReadMessage() (msg lib.Message, err error) {
 	return
 }
 
+func stringToRawMessage(str string) (json.RawMessage, bool) {
+    var js json.RawMessage
+	err := json.Unmarshal([]byte(str), &js)
+	return js, (err == nil)
+}
+
 func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 	if msg.Group, err = r.GetDataValue("CONTAINER_TAG"); len(msg.Group) == 0 {
 		// No CONTAINER_TAG, this must be a journal message from a process that
@@ -100,7 +106,21 @@ func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 		d.UseNumber()
 
 		if d.Decode(&msg.Event) != nil {
-			msg.Event.Message = s
+			raw, ok := stringToRawMessage(s)
+			if ok {
+				if unquoted, err :=  strconv.Unquote(s); err == nil {
+					if raw1, ok1 := stringToRawMessage(unquoted); ok1 {
+						msg.Event.Message = raw1
+					} else {
+						msg.Event.Message = raw
+					}
+				} else {
+					msg.Event.Message = raw
+				}
+			} else {
+				string_raw, _ := json.Marshal(s)
+				msg.Event.Message = json.RawMessage(string(string_raw))
+			}
 		}
 	}
 
