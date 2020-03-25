@@ -177,16 +177,16 @@
 			"revisionTime": "2020-03-25T16:10:20Z"
 		},
 		{
-			"checksumSHA1": "3rO7N18RlY8xG1c4N8HbjDzEqHE=",
+			"checksumSHA1": "hiDWB3Uz0yP6Biqs2hjN+adM0zE=",
 			"path": "github.com/kapralVV/ecs-logs-go",
-			"revision": "578bed1a5dd698ef64d2252335c6864316503e71",
-			"revisionTime": "2020-03-25T15:08:24Z"
+			"revision": "5d23103d6365b2750988fa25695832b7734688ae",
+			"revisionTime": "2020-03-25T16:42:55Z"
 		},
 		{
-			"checksumSHA1": "0OMTff9ZFKREYEJvG9TgcoQ0x78=",
+			"checksumSHA1": "ztt4bAoOq4Z16fgRuTUGATW0M+o=",
 			"path": "github.com/kapralVV/ecs-logs-go/apex",
-			"revision": "578bed1a5dd698ef64d2252335c6864316503e71",
-			"revisionTime": "2020-03-25T15:08:24Z"
+			"revision": "5d23103d6365b2750988fa25695832b7734688ae",
+			"revisionTime": "2020-03-25T16:42:55Z"
 		},
 		{
 			"checksumSHA1": "yMaAIGignj9Zrcp+MDEglFZfEcs=",

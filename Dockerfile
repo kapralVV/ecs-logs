@@ -14,10 +14,10 @@ RUN curl -s -L https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz 
     go get github.com/kardianos/govendor
 
 # Copy the ecs-logs sources so they can be built within the container.
-COPY . /go/src/github.com/segmentio/ecs-logs
+COPY . /go/src/github.com/kapralVV/ecs-logs
 
 # Build ecs-logs, then cleanup all unneeded packages.
-RUN cd /go/src/github.com/segmentio/ecs-logs && \
+RUN cd /go/src/github.com/kapralVV/ecs-logs && \
     govendor sync && \
     go build -o /usr/local/bin/ecs-logs
 

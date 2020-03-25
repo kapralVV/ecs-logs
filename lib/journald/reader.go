@@ -111,15 +111,24 @@ func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 				if unquoted, err :=  strconv.Unquote(s); err == nil {
 					if raw1, ok1 := stringToRawMessage(unquoted); ok1 {
 						msg.Event.Message = raw1
+						msg.Event.IsMessageJson = true
+						msg.Event.WasMessagequoted = true
 					} else {
 						msg.Event.Message = raw
+						msg.Event.IsMessageJson = true
+						msg.Event.WasMessagequoted = false
+
 					}
 				} else {
 					msg.Event.Message = raw
+					msg.Event.IsMessageJson = true
+					msg.Event.WasMessagequoted = false
 				}
 			} else {
 				string_raw, _ := json.Marshal(s)
 				msg.Event.Message = json.RawMessage(string(string_raw))
+				msg.Event.IsMessageJson = false
+				msg.Event.WasMessagequoted = false
 			}
 		}
 	}
