@@ -90,7 +90,6 @@ func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 	if msg.Stream, err = r.GetDataValue(r.streamName); err != nil {
 		// Fallback to CONTAINER_ID_FULL
 		if msg.Stream, err = r.GetDataValue("CONTAINER_ID_FULL"); err != nil {
-
 			// There's a CONTAINER_TAG but no CONTAINER_ID_FULL, something is seriously
 			// wrong here, the log docker log driver is misbehaving.
 			err = fmt.Errorf("missing CONTAINER_ID_FULL in message with CONTAINER_TAG=%s", msg.Group)
@@ -106,9 +105,8 @@ func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 		d.UseNumber()
 
 		if d.Decode(&msg.Event) != nil {
-			raw, ok := stringToRawMessage(s)
-			if ok {
-				if unquoted, err :=  strconv.Unquote(s); err == nil {
+			if raw, ok := stringToRawMessage(s[1:]); ok {
+				if unquoted, err :=  strconv.Unquote(s[1:]); err == nil {
 					if raw1, ok1 := stringToRawMessage(unquoted); ok1 {
 						msg.Event.Message = raw1
 						msg.Event.IsMessageJson = true
