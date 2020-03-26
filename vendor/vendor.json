@@ -171,12 +171,6 @@
 			"revisionTime": "2017-09-18T00:21:02Z"
 		},
 		{
-			"checksumSHA1": "H2FbH6/NnGMJF0Tr2BW3M+j+L1Y=",
-			"path": "github.com/kapralVV/ecs-logs",
-			"revision": "191b9d2468e265b80f0f73aea70a288c0df854bf",
-			"revisionTime": "2020-03-25T16:45:37Z"
-		},
-		{
 			"checksumSHA1": "hiDWB3Uz0yP6Biqs2hjN+adM0zE=",
 			"path": "github.com/kapralVV/ecs-logs-go",
 			"revision": "1f33cbaa3267704bf52c8c75db3984b505bc79b6",

@@ -105,8 +105,8 @@ func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 		d.UseNumber()
 
 		if d.Decode(&msg.Event) != nil {
-			if raw, ok := stringToRawMessage(s[1:]); ok {
-				if unquoted, err :=  strconv.Unquote(s[1:]); err == nil {
+			if raw, ok := stringToRawMessage(s); ok {
+				if unquoted, err :=  strconv.Unquote(s); err == nil {
 					if raw1, ok1 := stringToRawMessage(unquoted); ok1 {
 						msg.Event.Message = raw1
 						msg.Event.IsMessageJson = true
