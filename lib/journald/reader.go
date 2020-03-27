@@ -3,16 +3,16 @@
 package journald
 
 import (
-	"encoding/json"
 	"fmt"
 	"io"
 	"os"
 	"strings"
 	"sync/atomic"
 	"time"
+	"strconv"
 
 	"github.com/coreos/go-systemd/sdjournal"
-	"github.com/kapralVV/ecs-logs-go"
+	ecslogs "github.com/kapralVV/ecs-logs-go"
 	"github.com/kapralVV/ecs-logs/lib"
 )
 
@@ -93,12 +93,7 @@ func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 
 	msg.Stream = sanitizeStreamName(msg.Stream)
 
-	if s := r.getString("MESSAGE"); len(s) != 0 {
-		d := json.NewDecoder(strings.NewReader(s))
-		d.UseNumber()
-
-		if d.Decode(&msg.Event) != nil {
-			msg.Event.Message = s
+	message := r.getString("MESSAGE")
 
 	if msg.Event.Level == ecslogs.NONE {
 		msg.Event.Level = r.getPriority()
@@ -135,6 +130,8 @@ func (r *reader) getMessage() (msg lib.Message, ok bool, err error) {
 	if msg.Event.Time == (time.Time{}) {
 		msg.Event.Time = r.getTime()
 	}
+
+	msg.Event = ecslogs.MakeEvent(msg.Event.Level, message)
 
 	ok = true
 	return
