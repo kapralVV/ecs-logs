@@ -171,6 +171,12 @@
 			"revisionTime": "2017-09-18T00:21:02Z"
 		},
 		{
+			"checksumSHA1": "H2FbH6/NnGMJF0Tr2BW3M+j+L1Y=",
+			"path": "github.com/kapralVV/ecs-logs",
+			"revision": "955086383d62bef0214b864eab3e75a53949f1f2",
+			"revisionTime": "2020-03-27T09:52:36Z"
+		},
+		{
 			"checksumSHA1": "tbRu7X50tf/Euo/JMJZEZJJlEf0=",
 			"path": "github.com/kapralVV/ecs-logs-go",
 			"revision": "e91a36b521717df05c79f35d9858c2ac4afc0564",
@@ -185,8 +191,8 @@
 		{
 			"checksumSHA1": "Q9ufCjDqXeLUpBuRkXbSScHv1nE=",
 			"path": "github.com/kapralVV/ecs-logs/lib",
-			"revision": "4a411e342b14ada17c71913c6d4f7573ec427b49",
-			"revisionTime": "2020-03-25T17:45:33Z"
+			"revision": "955086383d62bef0214b864eab3e75a53949f1f2",
+			"revisionTime": "2020-03-27T09:52:36Z"
 		},
 		{
 			"checksumSHA1": "yMaAIGignj9Zrcp+MDEglFZfEcs=",
